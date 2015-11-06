@@ -1,8 +1,13 @@
 # PageDownloader
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/page_downloader`. To experiment with that code, run `bin/console` for an interactive prompt.
+Downloads a web page into a file embeding javascript and css into it.
 
-TODO: Delete this and the text above, and describe your gem
+[![Build Status](https://travis-ci.org/mjacobus/page_downloader.svg)](https://travis-ci.org/mjacobus/page_downloader)
+[![Code Coverage](https://scrutinizer-ci.com/g/mjacobus/page_downloader/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/mjacobus/page_downloader/?branch=master)
+[![Code Climate](https://codeclimate.com/github/mjacobus/page_downloader/badges/gpa.svg)](https://codeclimate.com/github/mjacobus/page_downloader)
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/mjacobus/page_downloader/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/mjacobus/page_downloader/?branch=master)
+[![Dependency Status](https://gemnasium.com/mjacobus/page_downloader.svg)](https://gemnasium.com/mjacobus/page_downloader)
+[![Gem Version](https://badge.fury.io/rb/page_downloader.svg)](https://badge.fury.io/rb/page_downloader)
 
 ## Installation
 
@@ -22,7 +27,11 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+```ruby
+page = "http://mjacobus.github.io/2015/08/28/resolving-github-token-issue-in-composer.html"
+
+PageDownloader.new(page).to_file("/tmp/downloaded.html")
+```
 
 ## Development
 
@@ -32,7 +41,7 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/page_downloader. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](contributor-covenant.org) code of conduct.
+Bug reports and pull requests are welcome on GitHub at https://github.com/mgjacobus/page_downloader. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](contributor-covenant.org) code of conduct.
 
 
 ## License
