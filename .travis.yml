@@ -15,4 +15,4 @@ script:
 
 gemfile:
   - Gemfile
-  - gemfiles/Gemfile
+  # - gemfiles/Gemfile
