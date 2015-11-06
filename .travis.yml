@@ -10,7 +10,6 @@ rvm:
   - 2.2
 
 script:
-  - rake db:migrate
   - rake test
 
 gemfile:
