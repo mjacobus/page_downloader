@@ -1,0 +1,11 @@
+#!/usr/bin/env ruby
+
+require "bundler/setup"
+require "page_downloader"
+
+page = ARGV[0]
+file = ARGV[1]
+
+PageDownloader.new(page).to_file(file)
+
+exit 0
