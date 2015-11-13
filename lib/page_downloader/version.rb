@@ -1,3 +1,3 @@
-module PageDownloader
-  VERSION = "0.1.0"
+class PageDownloader
+  VERSION = "1.0"
 end

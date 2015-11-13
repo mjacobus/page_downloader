@@ -23,3 +23,6 @@ end
 require "page_downloader"
 
 require "minitest/autorun"
+require "mocha/mini_test"
+
+FIXTURE_PATH = File.expand_path("../fixtures", __FILE__)
