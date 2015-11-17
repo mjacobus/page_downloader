@@ -22,18 +22,18 @@ class UrlResolver
   end
 
   def base_url_for(url)
-    matches = url.match(/(http(s)?:\/\/[^\/]+)/)
+    matches = url.match(%r{^(http(s)?://[^/]+)})
     return matches[1] if matches
   end
 
   def url_for_double_dashed(url)
-    if url.match(/^\/\/[\w]+/)
+    if url.match(%r{^//[\w]+})
       "http:#{url}"
     end
   end
 
   def slash_based_url(url)
-    if url.match(/^\/[\w]+/)
+    if url.match(%r{^/[\w]+})
       "#{base_url}#{url}"
     end
   end
