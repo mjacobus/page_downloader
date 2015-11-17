@@ -1,11 +1,6 @@
 $LOAD_PATH.unshift File.expand_path("../../lib", __FILE__)
 
-if ENV["COVERALLS"]
-  require "coveralls"
-  Coveralls.wear!
-end
-
-if ENV["COVERAGE"]
+def setup_simplecov
   require "simplecov"
 
   SimpleCov.start do
@@ -15,9 +10,21 @@ if ENV["COVERAGE"]
   end
 end
 
+if ENV["COVERALLS"]
+  require "coveralls"
+  Coveralls.wear!
+
+  setup_simplecov
+end
+
+if ENV["COVERAGE"]
+  setup_simplecov
+end
+
 if ENV["SCRUTINIZER"]
   require "scrutinizer/ocular"
   Scrutinizer::Ocular.watch!
+  setup_simplecov
 end
 
 require "page_downloader"
