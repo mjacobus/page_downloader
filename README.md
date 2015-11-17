@@ -1,6 +1,6 @@
 # PageDownloader
 
-Downloads a web page into a file embeding javascript and css into it.
+Downloads a web page into a file embedding javascript and css into it.
 
 [![Build Status](https://travis-ci.org/mjacobus/page_downloader.svg)](https://travis-ci.org/mjacobus/page_downloader)
 [![Code Coverage](https://scrutinizer-ci.com/g/mjacobus/page_downloader/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/mjacobus/page_downloader/?branch=master)
@@ -31,6 +31,12 @@ Or install it yourself as:
 page = "http://mjacobus.github.io/2015/08/28/resolving-github-token-issue-in-composer.html"
 
 PageDownloader.new(page).to_file("/tmp/downloaded.html")
+```
+
+On the command line:
+
+```ruby
+download_page "https://foo.com/bar.html" /tmp/my_page.html
 ```
 
 ## Development
