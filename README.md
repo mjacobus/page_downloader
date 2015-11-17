@@ -35,7 +35,7 @@ PageDownloader.new(page).to_file("/tmp/downloaded.html")
 
 On the command line:
 
-```ruby
+```bash
 download_page "https://foo.com/bar.html" /tmp/my_page.html
 ```
 
